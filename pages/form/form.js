@@ -1,5 +1,6 @@
-import { baseUrl } from "../../services/baseUrl.js";
+import { baseUrl, baseUrl2 } from "../../services/baseUrl.js";
 import { objectRequest, postGarage } from "../../services/serviceGarage.js";
+import { postPay } from "../../services/servicePay.js";
 
 const sobre = {
   title: "",
@@ -54,7 +55,9 @@ function getData() {
       numero: address.number,
       rua: address.street,
       tipoLogradouroString: sobre.tipoGarage,
-      tituloAnuncio: sobre.title
+      tituloAnuncio: sobre.title,
+      preco: charge.price,
+      tipoCobranca: charge.typeCharge
     }
 
     resolve(data)
@@ -64,4 +67,9 @@ function getData() {
 document.querySelector(".btn.btn-primary.anunciar")
   .addEventListener("click", () => {
     getData().then(data => postGarage(baseUrl, objectRequest("POST", data)));
+  });
+
+document.querySelector(".btn.btn-primary.anunciar")
+  .addEventListener("click", () => {
+    getData().then(data => postPay(baseUrl2, objectRequest("POST", data)));
   });
