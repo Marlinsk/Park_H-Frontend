@@ -1,5 +1,3 @@
-import { baseUrl2 } from "./baseUrl.js";
-
 async function getPay(url) {
     const search = await fetch(url);
     const result = await search.json();
@@ -35,10 +33,4 @@ async function deletePay(url, id, object) {
     return result;
 }
 
-
-const obter2 = async () => {
-    const result = await getPay(baseUrl2);
-    return result
-};
-
-export { obter2, postPay };
+export { getPay, postPay };

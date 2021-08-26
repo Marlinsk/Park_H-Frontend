@@ -9,7 +9,7 @@ const templateCard = (item) => {
           <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
             aria-labelledby="pills-home-tab">
             <h5 class="card-title">Tipo de Garagem</h5>
-            <p class="card-text mb-3">Estacionamento Comercial / Garagem Residencial</p>
+            <p class="card-text mb-3">${item?.tipoLogradouroString}</p>
             <h5 class="card-title">Descrição</h5>
             <p class="card-text">${item?.descricaoLocal}</p>
           </div>
