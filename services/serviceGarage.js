@@ -1,15 +1,3 @@
-import { baseUrl } from "./baseUrl.js";
-
-function objectRequest(typeRequest, data) {
-  return {
-    method: typeRequest,
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(data)
-  };
-}
-
 async function getGarage(url) {
   const search = await fetch(url);
   const result = await search.json();
@@ -45,9 +33,5 @@ async function deleteGarage(url, id, object) {
   return result;
 }
 
-const obter = async () => {
-  const result = await getGarage(baseUrl);
-  return result
-};
 
-export { obter, postGarage, objectRequest, updateGarage };
+export { getGarage, postGarage, updateGarage };
