@@ -1,6 +1,4 @@
-const baseUrl = "http://localhost:8902/garagem-api/cadastro-garagem/";
-
-const baseUrl2 = "http://localhost:8901/pagamentos-api/formas-de-pagamento/";
+const baseUrl = "http://localhost:8907/park-api/cadastrar-aluguel/";
 
 function objectRequest(typeRequest, data) {
   return {
@@ -12,4 +10,4 @@ function objectRequest(typeRequest, data) {
   };
 }
 
-export { baseUrl, baseUrl2, objectRequest };
+export { baseUrl, objectRequest };

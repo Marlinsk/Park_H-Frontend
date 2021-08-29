@@ -1,6 +1,5 @@
-import { baseUrl, baseUrl2, objectRequest } from "../../services/api.js";
-import { postGarage } from "../../services/serviceGarage.js";
-import { postPay } from "../../services/servicePay.js";
+import { baseUrl, objectRequest } from "../../services/api.js";
+import { postGarage } from "../../services/service.js";
 
 const sobre = {
   title: "",
@@ -56,21 +55,18 @@ function getData() {
       rua: address.street,
       tipoLogradouroString: sobre.tipoGarage,
       tituloAnuncio: sobre.title,
-      preco: charge.price,
-      tipoCobranca: charge.typeCharge
+      preco: parseFloat(charge.price),
+      tipoPagamento: charge.typeCharge
     }
-
+    
+    console.log(data) 
+    
     resolve(data)
   });
 }
 
 document.querySelector(".btn.btn-primary.anunciar")
   .addEventListener("click", () => {
-    getData()
-    .then(data => { 
-          postGarage(baseUrl, objectRequest("POST", data))
-          return charge
-        })
-        .then((data) => postPay(baseUrl2, objectRequest('POST', data))
-        .catch(err => console.log('ocorreu um erro ao consumir a api \n', err)));
+    getData().then(data => postGarage(baseUrl, objectRequest("POST", data)));
+    // getData()
   });
