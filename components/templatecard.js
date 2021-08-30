@@ -2,7 +2,7 @@ const templateCard = (item) => {
   return `
   <div class="col-lg-6 mx-auto">
 
-    <div class="card">
+    <div class="card mb-4">
       <div class="card-body">
         <div class="container">
 
