@@ -35,8 +35,8 @@ const templateCard = (item) => {
           </div>
 
           <div class="row justify-content-start mb-2">
-            <div class="col-5">
-              <p class="card-text">${item?.tipoCobranca}</p>
+            <div class="col-3">
+              <p class="card-text">${item?.tipoPagamento}</p>
             </div>
             <div class="col-5">
               <p class="card-text">${item?.preco}</p>
