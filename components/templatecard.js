@@ -11,7 +11,7 @@ const templateCard = (item) => {
           </a>
 
           <div class="row justify-content-start mb-2">
-            <div class="col-5">
+            <div class="col-4">
               <p class="card-text">${item?.rua}</p>
             </div>
             <div class="col-2">
