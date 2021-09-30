@@ -23,7 +23,7 @@ const title = document.querySelector("#tituloanucio");
 title.addEventListener("keypress", function(e) {
 
   const inputLength = title.value.length;
-  const maxChars = 50;
+  const maxChars = 35;
     
   if(inputLength >= maxChars){
     e.preventDefault(); 
@@ -35,7 +35,7 @@ const desc = document.querySelector("#FormControlTextarea");
 desc.addEventListener("keypress", function(e) {
 
   const inputLength = desc.value.length;
-  const maxChars = 300;
+  const maxChars = 350;
     
   if(inputLength >= maxChars){
      e.preventDefault(); 
@@ -110,39 +110,11 @@ function getData() {
 document.querySelector(".btn.btn-primary.anunciar")
   .addEventListener("click", () => {
     
-    // if(document.getElementById("tituloanucio").value.length == 0){
-    //   alert("Faltou preencher o campo título!");
-    // }
-    // if(document.getElementById("inlineRadio1", "inlineRadio2") != 1){
-    //   alert("Faltou selecionar o tipo de logradouro"); 
-    // }
-    // if(document.getElementById("cep").value.length == 0){
-    //   alert("Faltou preencher o campo do CEP!");  
-    // }
-    // if(document.getElementById("uf").value.length == 0){
-    //   alert("Faltou preencher o campo do (UF)Estado!");
-    // }
-    // if(document.getElementById("localidade").value.length == 0){
-    //   alert("Faltou preencher o campo da Localidade!");    
-    // }
-    // if(document.getElementById("bairro").value.length == 0){
-    //   alert("Faltou preencher o campo do Bairro");    
-    // }
-    // if(document.getElementById("logradouro").value.length == 0){
-    //   alert("Faltou preencher o campo do Logradouro");
-    // }
-    // if(document.getElementById("numero-residencia").value.length == 0){
-    //   alert("Faltou preencher o campo do Número da Residência");
-    // }
-    // if(document.getElementById("tipo-de-branca").value.length == "0"){
-    //   alert("Faltou preencher o campo do Tipo de Cobrança");
-    // }
-    // if(document.getElementById("preco").value.length == 0){
-    //   alert("Faltou preencher o campo do Preço");
-    // }
-
-    if(document.getElementById("tituloanucio", "inlineRadio1", "inlineRadio2", "cep", "uf", "localidade", "bairro", "logradouro", "numero-residencia", "tipo-de-branca", "preco").value.length != 0){
+    if(document.getElementById("tituloanucio", "inlineRadio1", "inlineRadio2", "FormControlTextarea", "cep", "uf", "localidade", "bairro", "logradouro", "numero-residencia", "tipo-de-branca", "preco").value.length != 0){
       getData().then(data => postGarage(baseUrl, objectRequest("POST", data)));
+      alert("Anúncio publicado com sucesso!");
+    }else{
+      alert("O formulário não está completamente preenchido.");
     }
   }
 );
