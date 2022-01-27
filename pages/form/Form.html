@@ -56,22 +56,173 @@
             </div>
             <div class="col-xl-7 mb-4 mx-auto">
                 <h4 class="mb-4">Sobre o Local</h4>
-                <div class="row g-4">                
-                    <div class="col-md-12">
-                        <div class="mb-2">
-                            <label class="form-label">Tipo de Garagem</label>
+                <div class="mb-2">
+                    <label class="form-label">Tipo de Garagem</label>
+                </div>
+                <div class="row g-4 mb-4">                
+                    <div class="col-12 col-sm-12">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Garagem Residencial" required>
+                            <label class="form-check-label" for="inlineRadio1">Garagem Residencial</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Garagem Residencial" required>
+                            <label class="form-check-label" for="inlineRadio3">Estacionamento de Condomínio</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
                                 value="Estacionamento Comercial" required>
                             <label class="form-check-label" for="inlineRadio1">Estacionamento Comercial</label>
                         </div>
+                    </div>
+                </div>
+                <div class="row g-4 mb-4">
+                    <div class="col-4 col-sm-4">
+                        <label for="tamanho" class="form-label">Tamanho (Metros)</label>
+                        <input type="string" class="form-control" id="tamanho" placeholder="" aria-describedby="tamanho">
+                    </div>
+                    <div class="col-4 col-sm-4">
+                        <label for="tipo-de-veiculo" class="form-label">Tipo de Veículo</label>
+                        <select class="form-select" id="tipo-de-veiculo" aria-label="Default select example" aria-placeholder="Selecione o Tipo" required>
+                            <option selected disabled value="">Selecione o Tipo</option>
+                            <option value="Carro">Carro</option>
+                            <option value="Caminhonete">Caminhonete</option>
+                            <option value="Caminhão">Caminhão</option>
+                            <option value="Moto">Moto</option>
+                            <option value="Van">Van</option>
+                            <option value="Veículos motorizados">Veículos motorizados</option>
+                        </select>
+                    </div>
+                    <div class="col-4 col-sm-4">
+                        <label for="tamanho" class="form-label">Capacidade</label>
+                        <input type="string" class="form-control" id="tamanho" placeholder="" aria-describedby="tamanho">
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Horário de Funcionamento.</label>
+                </div>
+                <div class="row g-2 mb-2">
+                    <div class="col-12 col-sm-12">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                value="Garagem Residencial" required>
-                            <label class="form-check-label" for="inlineRadio1">Garagem Residencial</label>
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">8H </label>
                         </div>
-                    </div> 
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">16H </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">24H</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Dias de Funcionamento durante a semana.</label>
+                </div>
+                <div class="row g-2 mb-2">
+                    <div class="col-12 col-sm-12">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Dom</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Seg</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Ter</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Qua</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Qui</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Sex</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Sáb</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">O local possui portaria?</label>
+                </div>
+                <div class="row g-2 mb-2">
+                    <div class="col-md-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                              Sim, disponível 24 horas!
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                              Sim, mas está disponível apenas durante horário de funcionamento.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                              Não!
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Quais os recursos de vigilância o local possui?</label>
+                </div>
+                <div class="row g-2 mb-4">
+                    <div class="col-6 col-sm-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Câmeras
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Câmera de visão noturna
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Alarme
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Empresa terceirizada
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Vigia 24 horas
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Policia Particular
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 mb-4">
                     <div class="col-md-12">
                         <label class="form-label">Descrição</label>
                         <textarea class="form-control" id="FormControlTextarea" rows="6" placeholder="Garagem de condomínio localizada no centro de Belo Horizonte. A segurança do local é terceirizada por uma empresa que realiza o monitoramento por câmeras. A entrada da garagem possui um porteiro com 24h de disponibilidade." required></textarea>
