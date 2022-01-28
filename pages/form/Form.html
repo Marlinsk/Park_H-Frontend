@@ -9,12 +9,9 @@
     <title>Park H</title>
     <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
@@ -43,8 +40,8 @@
     </div>
     <div class="container"> 
         <form class="needs-validation mb-5" novalidate>
-            <div class="col-xl-7 mb-4 mx-auto">
-                <div class="row g-4">
+            <div class="col-xl-8 mb-4 mx-auto">
+                <div class="row g-4 mb-4">
                     <div class="col-md-12">
                         <label class="form-label">Título do Anúncio</label>
                         <input type="input" class="form-control titleA" id="tituloanucio" aria-describedby="tituloanuncio" placeholder="Aluguel de Garagem em Condomínio Residencial" required>
@@ -53,25 +50,104 @@
                         </div>
                     </div>
                 </div>
+                <div class="row g-4 mb-4">
+                    <div class="col-md-8">
+                        <label for="nome-completo" class="form-label">Responsável</label>
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-person" viewBox="0 0 16 16">
+                                    <path d="M12 1a1 1 0 0 1 1 1v10.755S12 11 8 11s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z"/>
+                                    <path d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                </svg>
+                            </span>
+                            <input id="nome-completo" type="text" class="form-control" onblur="validateCompleteNameInput()" onkeyup="validateCompleteNameInput()" placeholder="Sam Mithz Von Heiheinhz" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="CPF" class="form-label">CPF/CNPJ</label>
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fingerprint" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8.06 6.5a.5.5 0 0 1 .5.5v.776a11.5 11.5 0 0 1-.552 3.519l-1.331 4.14a.5.5 0 0 1-.952-.305l1.33-4.141a10.5 10.5 0 0 0 .504-3.213V7a.5.5 0 0 1 .5-.5Z" />
+                                    <path
+                                        d="M6.06 7a2 2 0 1 1 4 0 .5.5 0 1 1-1 0 1 1 0 1 0-2 0v.332c0 .409-.022.816-.066 1.221A.5.5 0 0 1 6 8.447c.04-.37.06-.742.06-1.115V7Zm3.509 1a.5.5 0 0 1 .487.513 11.5 11.5 0 0 1-.587 3.339l-1.266 3.8a.5.5 0 0 1-.949-.317l1.267-3.8a10.5 10.5 0 0 0 .535-3.048A.5.5 0 0 1 9.569 8Zm-3.356 2.115a.5.5 0 0 1 .33.626L5.24 14.939a.5.5 0 1 1-.955-.296l1.303-4.199a.5.5 0 0 1 .625-.329Z" />
+                                    <path
+                                        d="M4.759 5.833A3.501 3.501 0 0 1 11.559 7a.5.5 0 0 1-1 0 2.5 2.5 0 0 0-4.857-.833.5.5 0 1 1-.943-.334Zm.3 1.67a.5.5 0 0 1 .449.546 10.72 10.72 0 0 1-.4 2.031l-1.222 4.072a.5.5 0 1 1-.958-.287L4.15 9.793a9.72 9.72 0 0 0 .363-1.842.5.5 0 0 1 .546-.449Zm6 .647a.5.5 0 0 1 .5.5c0 1.28-.213 2.552-.632 3.762l-1.09 3.145a.5.5 0 0 1-.944-.327l1.089-3.145c.382-1.105.578-2.266.578-3.435a.5.5 0 0 1 .5-.5Z" />
+                                    <path
+                                        d="M3.902 4.222a4.996 4.996 0 0 1 5.202-2.113.5.5 0 0 1-.208.979 3.996 3.996 0 0 0-4.163 1.69.5.5 0 0 1-.831-.556Zm6.72-.955a.5.5 0 0 1 .705-.052A4.99 4.99 0 0 1 13.059 7v1.5a.5.5 0 1 1-1 0V7a3.99 3.99 0 0 0-1.386-3.028.5.5 0 0 1-.051-.705ZM3.68 5.842a.5.5 0 0 1 .422.568c-.029.192-.044.39-.044.59 0 .71-.1 1.417-.298 2.1l-1.14 3.923a.5.5 0 1 1-.96-.279L2.8 8.821A6.531 6.531 0 0 0 3.058 7c0-.25.019-.496.054-.736a.5.5 0 0 1 .568-.422Zm8.882 3.66a.5.5 0 0 1 .456.54c-.084 1-.298 1.986-.64 2.934l-.744 2.068a.5.5 0 0 1-.941-.338l.745-2.07a10.51 10.51 0 0 0 .584-2.678.5.5 0 0 1 .54-.456Z" />
+                                    <path
+                                        d="M4.81 1.37A6.5 6.5 0 0 1 14.56 7a.5.5 0 1 1-1 0 5.5 5.5 0 0 0-8.25-4.765.5.5 0 0 1-.5-.865Zm-.89 1.257a.5.5 0 0 1 .04.706A5.478 5.478 0 0 0 2.56 7a.5.5 0 0 1-1 0c0-1.664.626-3.184 1.655-4.333a.5.5 0 0 1 .706-.04ZM1.915 8.02a.5.5 0 0 1 .346.616l-.779 2.767a.5.5 0 1 1-.962-.27l.778-2.767a.5.5 0 0 1 .617-.346Zm12.15.481a.5.5 0 0 1 .49.51c-.03 1.499-.161 3.025-.727 4.533l-.07.187a.5.5 0 0 1-.936-.351l.07-.187c.506-1.35.634-2.74.663-4.202a.5.5 0 0 1 .51-.49Z" />
+                                </svg>
+                            </span>
+                            <input id="CPF" type="text" class="form-control" onblur="validateCPFInput()" onkeyup="validateCPFInput()" placeholder="021.791.602-01" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 mb-4">
+                    <div class="col-md-12">
+                        <label for="email" class="form-label">E-mail</label>
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-at" viewBox="0 0 16 16">
+                                    <path
+                                        d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 1.689-.123 2.304-.335v-.862c-.43.199-1.354.328-2.29.328-2.926 0-4.813-1.88-4.813-4.798 0-2.844 1.921-4.881 4.594-4.881 2.735 0 4.608 1.688 4.608 4.156 0 1.682-.554 2.769-1.416 2.769-.492 0-.772-.28-.772-.76V5.206H8.923v.834h-.11c-.266-.595-.881-.964-1.6-.964-1.4 0-2.378 1.162-2.378 2.823 0 1.737.957 2.906 2.379 2.906.8 0 1.415-.39 1.709-1.087h.11c.081.67.703 1.148 1.503 1.148 1.572 0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 9.84 7.371 9.84c-.895 0-1.442-.725-1.442-1.914z" />
+                                </svg>
+                            </span>
+                            <input id='email' type="text" class="form-control" onblur="validateEmailInput()" onkeyup="validateEmailInput()" placeholder="HeiheinhzVMithz@outlook.com" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 mb-4">
+                    <div class="col-6 col-sm-6">
+                        <label for="telefone-celular" class="form-label">Telefone Celular</label>
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
+                                    <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                                </svg>
+                            </span>
+                            <input id="telefone-celular" type="text" class="form-control" onblur="validateSmartphoneNumberContactInput()" onkeyup="validateSmartphoneNumberContactInput()" placeholder="+55 (41) 9 8651-7047" required>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-6">
+                        <label for="telefone-fixo" class="form-label">Telefone Fixo</label>
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                </svg>
+                            </span>
+                            <input id="telefone-fixo" type="text" class="form-control" onblur="validateTelephoneNumberContactInput()" onkeyup="validateTelephoneNumberContactInput()" placeholder="+55 (41) 4321-6080" required>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-xl-7 mb-4 mx-auto">
+            <hr class="col-lg-8 mb-4 mx-auto">
+            <div class="col-xl-8 mb-4 mx-auto">
                 <h4 class="mb-4">Sobre o Local</h4>
                 <div class="mb-2">
                     <label class="form-label">Tipo de Garagem</label>
                 </div>
-                <div class="row g-4 mb-4">                
-                    <div class="col-12 col-sm-12">
+                <div class="row g-2 mb-4">                
+                    <div class="col-md-4">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Garagem Residencial" required>
                             <label class="form-check-label" for="inlineRadio1">Garagem Residencial</label>
                         </div>
+                    </div>    
+                    <div class="col-md-4">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Garagem Residencial" required>
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Estacionamento de Condomínio" required>
                             <label class="form-check-label" for="inlineRadio3">Estacionamento de Condomínio</label>
                         </div>
+                     </div>
+                    <div class="col-md-4">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                value="Estacionamento Comercial" required>
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Estacionamento Comercial" required>
                             <label class="form-check-label" for="inlineRadio1">Estacionamento Comercial</label>
                         </div>
                     </div>
@@ -84,7 +160,7 @@
                     <div class="col-4 col-sm-4">
                         <label for="tipo-de-veiculo" class="form-label">Tipo de Veículo</label>
                         <select class="form-select" id="tipo-de-veiculo" aria-label="Default select example" aria-placeholder="Selecione o Tipo" required>
-                            <option selected disabled value="">Selecione o Tipo</option>
+                            <option selected disabled>Selecione o Tipo</option>
                             <option value="Carro">Carro</option>
                             <option value="Caminhonete">Caminhonete</option>
                             <option value="Caminhão">Caminhão</option>
@@ -150,6 +226,15 @@
                             <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
                             <label class="form-check-label" for="inlineCheckbox1">Sáb</label>
                         </div>
+                    </div>
+                </div>
+                <div class="row g-4 mb-4">
+                    <div class="col-md-12">
+                        <label class="form-label">Descrição</label>
+                        <textarea class="form-control" id="FormControlTextarea" rows="6" placeholder="Garagem de condomínio localizada no centro de Belo Horizonte. A segurança do local é terceirizada por uma empresa que realiza o monitoramento por câmeras. A entrada da garagem possui um porteiro com 24h de disponibilidade." required></textarea>
+                        <div class="invalid-feedback">
+                            Dê uma descrição para o local!
+                        </div> 
                     </div>
                 </div>
                 <div class="mb-2">
@@ -222,24 +307,24 @@
                         </div>
                     </div>
                 </div>
-                <div class="row g-4 mb-4">
-                    <div class="col-md-12">
-                        <label class="form-label">Descrição</label>
-                        <textarea class="form-control" id="FormControlTextarea" rows="6" placeholder="Garagem de condomínio localizada no centro de Belo Horizonte. A segurança do local é terceirizada por uma empresa que realiza o monitoramento por câmeras. A entrada da garagem possui um porteiro com 24h de disponibilidade." required></textarea>
-                        <div class="invalid-feedback">
-                            Dê uma descrição para o local!
-                        </div> 
-                    </div>
-                </div>
             </div>
-            <div class="col-xl-7 mb-4 mx-auto">
+            <hr class="col-lg-8 mb-4 mx-auto">
+            <div class="col-xl-8 mb-4 mx-auto">
                 <h4 class="mb-4">Endereço do Local</h4>
-                <div class="row g-4">
+                <div class="row g-4 mb-4">
                     <div class="col-4 col-sm-4">
                         <label for="cep" class="form-label">CEP</label>
-                        <input type="string" class="form-control" id="cep" aria-describedby="cep" placeholder="30130-153" required>
-                        <div class="invalid-feedback">
-                            Digite o CEP do local!
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mailbox" viewBox="0 0 16 16">
+                                    <path d="M4 4a3 3 0 0 0-3 3v6h6V7a3 3 0 0 0-3-3zm0-1h8a4 4 0 0 1 4 4v6a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V7a4 4 0 0 1 4-4zm2.646 1A3.99 3.99 0 0 1 8 7v6h7V7a3 3 0 0 0-3-3H6.646z"/>
+                                    <path d="M11.793 8.5H9v-1h5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.354-.146l-.853-.854zM5 7c0 .552-.448 0-1 0s-1 .552-1 0a1 1 0 0 1 2 0z"/>
+                                </svg>
+                            </span>    
+                            <input type="string" class="form-control" id="cep" aria-describedby="cep" placeholder="30130-153" required>
+                            <div class="invalid-feedback">
+                                Digite o CEP do local!
+                            </div>
                         </div>
                     </div>
                     <div class="col-3 col-sm-3">
@@ -251,16 +336,36 @@
                     </div>
                     <div class="col-5 col-sm-5">
                         <label for="localidade" class="form-label">Cidade</label>
-                        <input type="localidade" class="form-control" id="localidade" aria-describedby="cidade" placeholder="Belo Horizonte" required>
-                        <div class="invalid-feedback">
-                            Digite o nome da cidade em que o local se encontra!
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-building" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z" />
+                                    <path
+                                        d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z" />
+                                </svg>
+                            </span>
+                            <input type="localidade" class="form-control" id="localidade" aria-describedby="cidade" placeholder="Belo Horizonte" required>
+                            <div class="invalid-feedback">
+                                Digite o nome da cidade em que o local se encontra!
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div class="row g-4 mb-4">
                     <div class="col-4 col-sm-4">
                         <label for="bairro" class="form-label">Bairro</label>
-                        <input type="string" class="form-control" id="bairro" aria-describedby="NomeBairro" placeholder="Savassi" required>
-                        <div class="invalid-feedback">
-                            Digite o nome do bairro em que o local se encontra!
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-signpost-split" viewBox="0 0 16 16">
+                                    <path
+                                        d="M7 7V1.414a1 1 0 0 1 2 0V2h5a1 1 0 0 1 .8.4l.975 1.3a.5.5 0 0 1 0 .6L14.8 5.6a1 1 0 0 1-.8.4H9v10H7v-5H2a1 1 0 0 1-.8-.4L.225 9.3a.5.5 0 0 1 0-.6L1.2 7.4A1 1 0 0 1 2 7h5zm1 3V8H2l-.75 1L2 10h6zm0-5h6l.75-1L14 3H8v2z" />
+                                </svg>
+                            </span>
+                            <input type="string" class="form-control" id="bairro" aria-describedby="NomeBairro" placeholder="Savassi" required>
+                            <div class="invalid-feedback">
+                                Digite o nome do bairro em que o local se encontra!
+                            </div>
                         </div>
                     </div>
                     <div class="col-8 col-sm-8">
@@ -270,6 +375,8 @@
                             Digite o nome da rua em que o local se encontra!
                         </div> 
                     </div>
+                </div>
+                <div class="row g-4 mb-4">
                     <div class="col-4 col-sm-4">
                         <label for="numero-residencia" class="form-label">Número</label>
                         <input type="string" class="form-control" id="numero-residencia" aria-describedby="numero-residencia" placeholder="473" required>
@@ -286,13 +393,52 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-7 mb-5 mx-auto">
-                <h4 class="mb-4">Cobrança</h4>
+            <hr class="col-lg-8 mb-4 mx-auto">
+            <div class="col-lg-8 mb-4 mx-auto">
+                <h4 class="mb-4">Dados Bancários</h4>
                 <div class="row g-4">
+                    <div class="col-4">
+                        <label for="nome-do-banco" class="form-label">Nome do banco</label>
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bank" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 .95 14.61 4h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.379l.5 2A.5.5 0 0 1 15.5 17H.5a.5.5 0 0 1-.485-.621l.5-2A.5.5 0 0 1 1 14V7H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 4h.89L8 .95zM3.776 4h8.447L8 2.05 3.776 4zM2 7v7h1V7H2zm2 0v7h2.5V7H4zm3.5 0v7h1V7h-1zm2 0v7H12V7H9.5zM13 7v7h1V7h-1zm2-1V5H1v1h14zm-.39 9H1.39l-.25 1h13.72l-.25-1z" />
+                                </svg>
+                            </span>
+                            <input id="nome-do-banco" type="text" class="form-control" onblur="validateBankName()" onkeyup="validateBankName()" placeholder="Inter" required>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <label for="numero-do-banco" class="form-label">Número do banco</label>
+                        <input id="numero-do-banco" type="text" class="form-control" onblur="validateBankCode()" onkeyup="validateBankCode()" placeholder="077" required>
+                    </div>
+                    <div class="col-4">
+                        <label for="agencia" class="form-label">Agência</label>
+                        <input id="agencia" type="text" class="form-control" onblur="validateAgencyCode()" onkeyup="validateAgencyCode()" placeholder="0001" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="conta-corrente" class="form-label">Conta corrente</label>
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-credit-card-2-front" viewBox="0 0 16 16">
+                                    <path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
+                                    <path d="M2 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z"/>
+                                </svg>
+                            </span>
+                            <input id="conta-corrente" type="text" class="form-control" onblur="validateCheckingAccountInput()" onkeyup="validateCheckingAccountInput()" placeholder="1241790-7" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="col-lg-8 mb-4 mx-auto">
+            <div class="col-xl-8 mb-5 mx-auto">
+                <h4 class="mb-4">Cobrança</h4>
+                <div class="row g-4 mb-4">
                     <div class="col-4 col-sm-4">
                         <label for="string" class="form-label">Tipo de Cobrança</label>
                         <select class="form-select" id="tipo-de-branca" aria-label="Default select example" aria-placeholder="Selecione o Tipo" required>
-                            <option selected disabled value="">Selecione o Tipo</option>
+                            <option selected disabled>Selecione o Tipo</option>
                             <option value="Por Hora">Por Hora</option>
                             <option value="Diário">Diário</option>
                             <option value="Semanal">Semanal</option>
@@ -302,11 +448,24 @@
                             Selecione um tipo de cobrança. Ex: Se é Por hora ou Diário
                         </div>
                     </div>
-                    <div class="col-8 col-sm-8">
+                    <div class="col-8 col-sm-4">
                         <label for="string" class="form-label">Preço do Aluguel</label>
                         <input type="string" class="form-control" id="preco" aria-describedby="preco" placeholder="300,00" required>
                         <div class="invalid-feedback">
                             Informe seu preço de cobrança pelo aluguel!
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-2">
+                            <label class="form-label">IPTU incluso?</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Sim</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Não</label>
                         </div>
                     </div>
                 </div>
