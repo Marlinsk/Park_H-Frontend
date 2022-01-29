@@ -14,20 +14,20 @@
 </head>
 
 <body class="bg-light bg-gradient">
-    <div class="container">
-        <nav class="navbar fixed-top navbar-dark shadow-sm p-3 bg-dark">
-            <div class="container-fluid">
-                <span class="navbar-brand mb-0 h1">
-                    <img src="../../assets/car-garage.svg" alt="Logo do Park H" width="30" height="30" class="d-inline-block align-text-top">
-                    Park H
-                    <a href="../feed/Feed.html">
-                        <button type="button" class="btn btn-outline-light position-absolute end-0 me-2">Ver Anúncios</button>
-                    </a>
-                </span>
-            </div>
-        </nav>
-        <br><br><br><br>
-    </div>
+    <nav class="navbar navbar-dark bg-dark shadow-sm fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand">
+                <img src="../../assets/car-garage.svg" alt="Logo do Park H" width="30" height="30" class="d-inline-block align-text-top">
+                Park H
+            </a>
+            <form class="d-flex">
+                <a href="../feed/Feed.html"> 
+                    <button class="btn btn-outline-light" type="button">Ver Anúncios</button>
+                </a>    
+            </form>
+        </div>
+    </nav>
+    <br><br><br><br>
     <div class="container">
         <div class="py-3 text-center">
             <h2>Anuncie Aqui!</h2>
@@ -355,8 +355,8 @@
             <hr class="col-lg-8 mb-4 mx-auto">
             <div class="col-lg-8 mb-4 mx-auto">
                 <h4 class="mb-4">Dados Bancários</h4>
-                <div class="row g-4">
-                    <div class="col-4">
+                <div class="row g-4 mb-4">
+                    <div class="col-4 col-sm-4">
                         <label for="nome-do-banco" class="form-label">Nome do banco</label>
                         <div class="input-group">
                             <span class="input-group-text">
@@ -367,15 +367,17 @@
                             <input id="nome-do-banco" type="text" class="form-control" onblur="validateBankName()" onkeyup="validateBankName()" placeholder="Inter" required>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 col-sm-4">
                         <label for="numero-do-banco" class="form-label">Número do banco</label>
                         <input id="numero-do-banco" type="text" class="form-control" onblur="validateBankCode()" onkeyup="validateBankCode()" placeholder="077" required>
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 col-sm-4">
                         <label for="agencia" class="form-label">Agência</label>
                         <input id="agencia" type="text" class="form-control" onblur="validateAgencyCode()" onkeyup="validateAgencyCode()" placeholder="0001" required>
                     </div>
-                    <div class="col-md-4">
+                </div>    
+                <div class="row g-4">
+                    <div class="col-6 col-sm-6">
                         <label for="conta-corrente" class="form-label">Conta corrente</label>
                         <div class="input-group">
                             <span class="input-group-text">
@@ -386,6 +388,10 @@
                             </span>
                             <input id="conta-corrente" type="text" class="form-control" onblur="validateCheckingAccountInput()" onkeyup="validateCheckingAccountInput()" placeholder="1241790-7" required>
                         </div>
+                    </div>
+                    <div class="col-6 col-sm-6">
+                        <label for="chave-pix" class="form-label">Chave Pix</label>
+                        <input id="chave-pix" type="text" class="form-control" required>
                     </div>
                 </div>
             </div>
@@ -432,7 +438,6 @@
 
     <script type="text/javascript">
         $("#cep").mask("00000-000");
-        $("#preco").mask('#.##0,00', {reverse: true});
     </script>
 
     <script type="module" src="./scripts/getdata/script.js"></script>
