@@ -154,7 +154,7 @@
                 <div class="row g-4 mb-4">
                     <div class="col-md-12">
                         <label class="form-label">Título do Anúncio</label>
-                        <input type="input" class="form-control titleA" id="tituloanucio" placeholder="Aluguel de Garagem em Condomínio Residencial" required>
+                        <input type="input" class="form-control titleA" id="titulo-anuncio" placeholder="Aluguel de Garagem em Condomínio Residencial" required>
                     </div>
                 </div>
                 <div class="mb-2">
@@ -258,8 +258,8 @@
                 </div>
                 <div class="row g-4 mb-4">
                     <div class="col-md-12">
-                        <label class="form-label">Descrição</label>
-                        <textarea class="form-control" id="FormControlTextarea" rows="6" placeholder="Garagem de condomínio localizada no centro de Belo Horizonte. A segurança do local é terceirizada por uma empresa que realiza o monitoramento por câmeras. A entrada da garagem possui um porteiro com 24h de disponibilidade." required></textarea> 
+                        <label for="descricao" class="form-label">Descrição</label>
+                        <textarea class="form-control" id="descricao" rows="6" placeholder="Garagem de condomínio localizada no centro de Belo Horizonte. A segurança do local é terceirizada por uma empresa que realiza o monitoramento por câmeras. A entrada da garagem possui um porteiro com 24h de disponibilidade." required></textarea> 
                     </div>
                 </div>
                 <div class="mb-2">
@@ -457,7 +457,7 @@
     <script type="module" src="./scripts/getdata/script.js"></script>
     <script type="module" src="./scripts/lockout/charLimit.js"></script>
     <script type="module" src="./scripts/lockout/numberCharLock.js"></script>
-    <script type="module" src="./scripts/lockout/specialCharLock.js"></script>
+    <script type="module" src="./scripts/lockout/inputLock.js"></script>
     <script type="module" src="./scripts/validate/script.js"></script>
     <script type="module" src="../../services/getCEP.js"></script>
     <script type="module" src="../../services/service.js"></script>
