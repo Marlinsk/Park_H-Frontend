@@ -1,7 +1,30 @@
+const profile = {
+  name: "",
+  cpfcnpj: "",
+  email: "",
+  cellphonenumber: "",
+  telephonenumber: ""
+}
+
+const bankdata = {
+  bankname: "",
+  banknumber: "",
+  agency: "",
+  checkingaccount: "",
+  pixkey: ""
+}
+
 const adData = {
   title: "",
   garageType: "",
-  description: ""
+  locationsize: "",
+  vehicletype: "",
+  capacity: "",
+  openinghours: "",
+  operatingdays: [],
+  description: "",
+  concierge: "",
+  surveillanceresources: []
 }
 
 const address = {
@@ -15,15 +38,19 @@ const address = {
 }
 
 const payment = {
+  typePayment: "",
   price: "",
-  typePayment: ""
+  iptu: "",
+  paymentchannels: []
 }
 
 function getData() {
+  
   return new Promise((resolve) => {
+    
     // Ad Data
-    adData.title = document.querySelector(".form-control.titleA").value;
-    document.getElementsByName('inlineRadioOptions').forEach(item => {
+    adData.title = document.querySelector("#titulo-anuncio").value;
+    document.getElementsByName('TipoGaragem').forEach(item => {
       if (item.checked) {
         adData.garageType = item.value;
       }
@@ -54,8 +81,8 @@ function getData() {
       rua: address.street,
       numero: address.number, 
       complementoLocal: address.complement,
-      preco: parseFloat(payment.price),
-      tipoPagamento: payment.typePayment
+      tipoPagamento: payment.typePayment,
+      preco: parseFloat(payment.price)
     }
     
     console.log(data) 
