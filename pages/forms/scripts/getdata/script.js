@@ -63,20 +63,16 @@ function getData() {
     dadosBancarios.chavePix = document.querySelector("#chave-pix")?.value;
 
     // Dados anuncio
-    dadosAnuncio.diasFuncionamento = document.querySelectorAll('.form-check-input.week');
-    dadosAnuncio.recursosVigilancia = document.querySelectorAll('.form-check-input.vigilancia');
-    dadosAnuncio.horarioFuncionamento = document.querySelector('input[name="HorarioFuncionamento"]:checked')?.value;
-    dadosAnuncio.temPortaria = document.querySelector('input[name="flexRadioPortaria"]:checked')?.value;
-    dadosAnuncio.tipoVeiculo = document.querySelector('#tipo-de-veiculo')?.value;
-    
     dadosAnuncio.titulo = document.querySelector("#titulo-anuncio")?.value;
-
-    document.getElementsByName('TipoGaragem').forEach(item => {
-      if (item.checked) {
-        dadosAnuncio.tipoGaragem = item?.value;
-      }
-    });
+    dadosAnuncio.tipoGaragem = document.querySelector('input[name="TipoGaragem"]:checked')?.value;
+    dadosAnuncio.tamanhoLocal = document.querySelector("#tamanho-do-local")?.value;
+    dadosAnuncio.tipoVeiculo = document.querySelector('#tipo-de-veiculo')?.value;
+    dadosAnuncio.capacidade = document.querySelector("#capacidade")?.value;
+    dadosAnuncio.horarioFuncionamento = document.querySelector('input[name="HorarioFuncionamento"]:checked')?.value;
+    dadosAnuncio.diasFuncionamento = document.querySelectorAll('.form-check-input.week');
     dadosAnuncio.descricao = document.getElementById("descricao")?.value;
+    dadosAnuncio.temPortaria = document.querySelector('input[name="flexRadioPortaria"]:checked')?.value;
+    dadosAnuncio.recursosVigilancia = document.querySelectorAll('.form-check-input.vigilancia');
     
     // Endereço
     endereco.cep = document.querySelector("#cep")?.value;
@@ -88,32 +84,43 @@ function getData() {
     endereco.complemento = document.querySelector("#complemento")?.value;
     
     // Dados de Cobrança
-    dadosCobranca.preco = document.querySelector("#preco")?.value;
     dadosCobranca.tipoCobranca = document.querySelector("#tipo-de-cobranca")?.value;
-    dadosCobranca.canalPagamento = document.querySelectorAll(".form-check-input.pagamento");
+    dadosCobranca.preco = document.querySelector("#preco")?.value;
     dadosCobranca.iptu = document.querySelector('input[name="inlineRadioOptionsIPTU"]:checked')?.value;
+    dadosCobranca.canalPagamento = document.querySelectorAll(".form-check-input.pagamento");
     
     const data = {
-
+      nomeResponsavel: perfilAnunciante.nome,
+      codigoCadastro: perfilAnunciante.cpfcnpj,
+      emailResponsavel: perfilAnunciante.email,
+      contatoCelular: perfilAnunciante.contatoCelular,
+      telefoneFixo: perfilAnunciante.telefoneFixo,
+      nomeBanco: dadosBancarios.nomeBanco,
+      codigoBanco: dadosBancarios.codigonumericoBanco,
+      numeroAgencia: dadosBancarios.agencia,
+      contaCorrente: dadosBancarios.contaCorrente,
+      chavePix: dadosBancarios.chavePix,
       tituloAnuncio: dadosAnuncio.titulo,
       tipoLogradouroString: dadosAnuncio.tipoGarage,
+      tamanhoLocal: dadosAnuncio.tamanhoLocal,
+      tipoVeiculo: dadosAnuncio.tipoVeiculo,
+      capacidade: dadosAnuncio.capacidade,
+      horarioFuncionamento: dadosAnuncio.horarioFuncionamento,
+      diasDaSemana: Array.from(dadosAnuncio.diasFuncionamento).filter(a => a.checked).map(b => b?.value),
       descricaoLocal: dadosAnuncio.description,
+      portaria: dadosAnuncio.temPortaria,
+      recursosVigilancia: Array.from(dadosAnuncio.recursosVigilancia).filter(a => a.checked).map(b => b?.value),
       cep: endereco.cep,
       estado: endereco.estado,
       cidade: endereco.cidade,
       bairro: endereco.bairro,
       rua: endereco.rua,
       numero: endereco.numero, 
-      complementoLocal: endereco.complemento,
+      complementoLocal: endereco.complemento,  
       tipoPagamento: dadosCobranca.tipoCobranca,
       preco: parseFloat(dadosCobranca.preco),
-
-      diasDaSemana: Array.from(dadosAnuncio.diasFuncionamento).filter(a => a.checked).map(b => b?.value),
-      recursosVigilancia: Array.from(dadosAnuncio.recursosVigilancia).filter(a => a.checked).map(b => b?.value),
+      temIPTU: dadosCobranca.iptu,
       canaisPagamento: Array.from(dadosCobranca.canalPagamento).filter(a => a.checked).map(b => b?.value),
-      horarioFuncionamento: dadosAnuncio.horarioFuncionamento,
-      portaria: dadosAnuncio.temPortaria,
-      tipoVeiculo: dadosAnuncio.tipoVeiculo,
     }
     
     resolve(data)

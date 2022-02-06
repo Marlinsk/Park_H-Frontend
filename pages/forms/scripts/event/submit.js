@@ -14,7 +14,7 @@ document.querySelector(".btn.btn-primary.anunciar").addEventListener("click", (e
       })
 
       if(camposPreenchidos.length > 0) { 
-        alert(`Os campos listados abaixo ainda não foram preenchidos: \n\n ${camposPreenchidos.map(res => res).join(', \n')}`)
+        alert(`Os campos listados abaixo ainda não foram preenchidos:\n${camposPreenchidos.map(res => res).join(', \n')}`)
       } else {
         getData()
           .then(data => postGarage(baseUrl, objectRequest("POST", data)))
