@@ -57,6 +57,12 @@ function getData() {
     });
     adData.description = document.getElementById("descricao").value;
 
+    // Dados anuncio
+    adData.operatingdays = document.querySelectorAll('.form-check-input.week');
+    adData.surveillanceresources = document.querySelectorAll('.form-check-input.vigilancia');
+    adData.openinghours = document.querySelector('.form-check-input.horas').value;
+    adData.concierge = document.querySelector('.form-check-input.porteiro').value
+
     // Address
     address.cep = document.querySelector("#cep").value;
     address.state = document.querySelector("#estado").value;
@@ -69,6 +75,7 @@ function getData() {
     // Payment
     payment.price = document.querySelector("#preco").value;
     payment.typePayment = document.querySelector("#tipo-de-cobranca").value;
+    payment.paymentchannels = document.querySelectorAll(".form-check-input.pagamento");
 
     const data = {
       tituloAnuncio: adData.title,
@@ -82,10 +89,14 @@ function getData() {
       numero: address.number, 
       complementoLocal: address.complement,
       tipoPagamento: payment.typePayment,
-      preco: parseFloat(payment.price)
+      preco: parseFloat(payment.price),
+      horarioFuncionamento: adData.openinghours,
+
+      diasDaSemana: Array.from(adData.operatingdays).filter(a => a.checked).map(b => b.value),
+      vigilancia: Array.from(adData.surveillanceresources).filter(a => a.checked).map(b => b.value),
+      payment: Array.from(payment.paymentchannels).filter(a => a.checked).map(b => b.value)
+      
     }
-    
-    console.log(data) 
     
     resolve(data)
   });
