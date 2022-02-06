@@ -2,12 +2,24 @@ import { baseUrl, objectRequest } from "../../../../services/api.js";
 import { postGarage } from "../../../../services/service.js";
 import { getData } from "../getdata/script.js";
 
-document.querySelector(".btn.btn-primary.anunciar").addEventListener("submit", () => {
-    if (document.getElementById("tituloanucio", "inlineRadio1", "inlineRadio2", "FormControlTextarea", "cep", "uf", "localidade", "bairro", "logradouro", "numero-residencia", "tipo-de-branca", "preco").value.length != 0) {
-      getData().then(data => postGarage(baseUrl, objectRequest("POST", data)));
-      alert("Anúncio publicado com sucesso!");
-    } else {
-      alert("O formulário não está completamente preenchido.");
-    }
+document.querySelector(".btn.btn-primary.anunciar").addEventListener("click", (e) => {
+  e.preventDefault();
+    getData().then(res => {
+      let camposPreenchidos = []; 
+
+      Object.keys(res).map(a => { 
+        if(res[a] === '' || res[a] === [] || res[a] === undefined || res[a] === NaN) {
+         camposPreenchidos.push(a)
+        }
+      })
+
+      if(camposPreenchidos.length > 0) { 
+        alert(`Os campos listados abaixo ainda não foram preenchidos: \n\n ${camposPreenchidos.map(res => res).join(', \n')}`)
+      } else {
+        getData()
+          .then(data => postGarage(baseUrl, objectRequest("POST", data)))
+            .then(() =>  alert('Formulário salvo'));
+      }
+    })
   }
 );
