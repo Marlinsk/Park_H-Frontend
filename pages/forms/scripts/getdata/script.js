@@ -48,6 +48,20 @@ function getData() {
   
   return new Promise((resolve) => {
     
+    // Profile
+    profile.name = document.querySelector("#nome-completo").value;
+    profile.cpfcnpj = document.querySelector("#CPF-CNPJ").value;
+    profile.email = document.querySelector("#email").value;
+    profile.cellphonenumber = document.querySelector("#telefone-celular").value;
+    profile.telephonenumber = document.querySelector("#telefone-fixo").value;
+
+    // Bank data
+    bankdata.bankname = document.querySelector("#nome-do-banco").value;
+    bankdata.banknumber = document.querySelector("#numero-do-banco").value;
+    bankdata.agency = document.querySelector("#agencia").value;
+    bankdata.checkingaccount = document.querySelector("#conta-corrente").value;
+    bankdata.pixkey = document.querySelector("#chave-pix").value;
+
     // Ad Data
     adData.title = document.querySelector("#titulo-anuncio").value;
     document.getElementsByName('TipoGaragem').forEach(item => {
