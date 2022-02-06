@@ -1,102 +1,103 @@
-const profile = {
-  name: "",
+const perfilAnunciante = {
+  nome: "",
   cpfcnpj: "",
   email: "",
-  cellphonenumber: "",
-  telephonenumber: ""
+  contatoCelular: "",
+  telefoneFixo: ""
 }
 
-const bankdata = {
-  bankname: "",
-  banknumber: "",
-  agency: "",
-  checkingaccount: "",
-  pixkey: ""
+const dadosBancarios = {
+  nomeBanco: "",
+  codigonumericoBanco: "",
+  agencia: "",
+  contaCorrente: "",
+  chavePix: ""
 }
 
-const adData = {
-  title: "",
-  garageType: "",
-  locationsize: "",
-  vehicletype: "",
-  capacity: "",
-  openinghours: "",
-  operatingdays: [],
-  description: "",
-  concierge: "",
-  surveillanceresources: []
+const dadosAnuncio = {
+  titulo: "",
+  tipoGaragem: "",
+  tamanhoLocal: "",
+  tipoVeiculo: "",
+  capacidade: "",
+  horarioFuncionamento: "",
+  diasFuncionamento: [],
+  descricao: "",
+  temPortaria: "",
+  recursosVigilancia: []
 }
 
-const address = {
+const endereco = {
   cep: "",
-  state: "",
-  city: "",
-  neighborhood: "",
-  street: "",
-  number: "",
-  complement: ""
+  estado: "",
+  cidade: "",
+  bairro: "",
+  rua: "",
+  numero: "",
+  complemento: ""
 }
 
-const payment = {
-  typePayment: "",
-  price: "",
+const dadosCobranca = {
+  tipoCobranca: "",
+  preco: "",
   iptu: "",
-  paymentchannels: []
+  canalPagamento: []
 }
 
 function getData() {
   
   return new Promise((resolve) => {
     
-    // Profile
-    profile.name = document.querySelector("#nome-completo").value;
-    profile.cpfcnpj = document.querySelector("#CPF-CNPJ").value;
-    profile.email = document.querySelector("#email").value;
-    profile.cellphonenumber = document.querySelector("#telefone-celular").value;
-    profile.telephonenumber = document.querySelector("#telefone-fixo").value;
+    // Perfil do Anunciante
+    perfilAnunciante.nome = document.querySelector("#nome-completo").value;
+    perfilAnunciante.cpfcnpj = document.querySelector("#CPF-CNPJ").value;
+    perfilAnunciante.email = document.querySelector("#email").value;
+    perfilAnunciante.contatoCelular = document.querySelector("#telefone-celular").value;
+    perfilAnunciante.telefoneFixo = document.querySelector("#telefone-fixo").value;
 
-    // Bank data
-    bankdata.bankname = document.querySelector("#nome-do-banco").value;
-    bankdata.banknumber = document.querySelector("#numero-do-banco").value;
-    bankdata.agency = document.querySelector("#agencia").value;
-    bankdata.checkingaccount = document.querySelector("#conta-corrente").value;
-    bankdata.pixkey = document.querySelector("#chave-pix").value;
+    // Dados Bancários
+    dadosBancarios.nomeBanco = document.querySelector("#nome-do-banco").value;
+    dadosBancarios.codigonumericoBanco = document.querySelector("#numero-do-banco").value;
+    dadosBancarios.agencia = document.querySelector("#agencia").value;
+    dadosBancarios.contaCorrente = document.querySelector("#conta-corrente").value;
+    dadosBancarios.chavePix = document.querySelector("#chave-pix").value;
 
-    // Ad Data
-    adData.title = document.querySelector("#titulo-anuncio").value;
+    // Dados do Anúncio
+    dadosAnuncio.titulo = document.querySelector("#titulo-anuncio").value;
     document.getElementsByName('TipoGaragem').forEach(item => {
       if (item.checked) {
-        adData.garageType = item.value;
+        dadosAnuncio.tipoGaragem = item.value;
       }
     });
-    adData.description = document.getElementById("descricao").value;
+    dadosAnuncio.descricao = document.getElementById("descricao").value;
 
-    // Address
-    address.cep = document.querySelector("#cep").value;
-    address.state = document.querySelector("#estado").value;
-    address.city = document.querySelector("#nome-da-cidade").value;
-    address.neighborhood = document.querySelector("#bairro").value;
-    address.street = document.querySelector("#nome-da-rua").value;
-    address.number = document.querySelector("#numero-residencia").value;
-    address.complement = document.querySelector("#complemento").value;
+    // Endereço
+    endereco.cep = document.querySelector("#cep").value;
+    endereco.estado = document.querySelector("#estado").value;
+    endereco.cidade = document.querySelector("#nome-da-cidade").value;
+    endereco.bairro = document.querySelector("#bairro").value;
+    endereco.rua = document.querySelector("#nome-da-rua").value;
+    endereco.numero = document.querySelector("#numero-residencia").value;
+    endereco.complemento = document.querySelector("#complemento").value;
 
-    // Payment
-    payment.price = document.querySelector("#preco").value;
-    payment.typePayment = document.querySelector("#tipo-de-cobranca").value;
+    // Dados de Cobrança
+    dadosCobranca.preco = document.querySelector("#preco").value;
+    dadosCobranca.tipoCobranca = document.querySelector("#tipo-de-cobranca").value;
 
     const data = {
-      tituloAnuncio: adData.title,
-      tipoLogradouroString: adData.tipoGarage,
-      descricaoLocal: adData.description,
-      cep: address.cep,
-      estado: address.state,
-      cidade: address.city,
-      bairro: address.neighborhood,
-      rua: address.street,
-      numero: address.number, 
-      complementoLocal: address.complement,
-      tipoPagamento: payment.typePayment,
-      preco: parseFloat(payment.price)
+
+      tituloAnuncio: dadosAnuncio.titulo,
+      tipoLogradouroString: dadosAnuncio.tipoGarage,
+      descricaoLocal: dadosAnuncio.description,
+      cep: endereco.cep,
+      estado: endereco.estado,
+      cidade: endereco.cidade,
+      bairro: endereco.bairro,
+      rua: endereco.rua,
+      numero: endereco.numero, 
+      complementoLocal: endereco.complemento,
+      tipoPagamento: dadosCobranca.tipoCobranca,
+      preco: parseFloat(dadosCobranca.preco)
     }
     
     console.log(data) 
