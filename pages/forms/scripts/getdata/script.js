@@ -62,7 +62,7 @@ function getData() {
     dadosBancarios.contaCorrente = document.querySelector("#conta-corrente")?.value;
     dadosBancarios.chavePix = document.querySelector("#chave-pix")?.value;
 
-    // Dados anuncio
+    // Dados do Anúncio
     dadosAnuncio.titulo = document.querySelector("#titulo-anuncio")?.value;
     dadosAnuncio.tipoGaragem = document.querySelector('input[name="TipoGaragem"]:checked')?.value;
     dadosAnuncio.tamanhoLocal = document.querySelector("#tamanho-do-local")?.value;
@@ -74,7 +74,7 @@ function getData() {
     dadosAnuncio.temPortaria = document.querySelector('input[name="flexRadioPortaria"]:checked')?.value;
     dadosAnuncio.recursosVigilancia = document.querySelectorAll('.form-check-input.vigilancia');
     
-    // Endereço
+    // Endereço do Local
     endereco.cep = document.querySelector("#cep")?.value;
     endereco.estado = document.querySelector("#estado")?.value;
     endereco.cidade = document.querySelector("#nome-da-cidade")?.value;
