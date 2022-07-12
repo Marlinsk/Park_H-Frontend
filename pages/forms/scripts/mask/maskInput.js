@@ -1,42 +1,13 @@
-$("#CPF-CNPJ").keydown(function(){
-    try {
-        $("#CPF-CNPJ").unmask();
-    } catch (e) {}
+$("#tamanho-do-local").mask("#####0,0 m", { reverse: true });
 
-    var tamanho = $("#CPF-CNPJ").val().length;
-
-    if(tamanho < 11){
-        $("#CPF-CNPJ").mask("999.999.999-99");
-    } else {
-        $("#CPF-CNPJ").mask("99.999.999/9999-99");
-    }
-
-    // ajustando foco
-    var elem = this;
-    setTimeout(function(){
-        // mudo a posição do seletor
-        elem.selectionStart = elem.selectionEnd = 10000;
-    }, 0);
-    // reaplico o valor para mudar o foco
-    var currentValue = $(this).val();
-    $(this).val('');
-    $(this).val(currentValue);
-});
-
-$("#telefone-celular").mask("+00 (00) 0 0000-0000");
-$("#telefone-fixo").mask("+00 (00) 0000-0000");
-
-
-$('#tamanho-do-local').mask('#####0,0 m', {reverse: true});
-
-$('#tamanho-do-local').on('keyup', function() {
-  if( $(this).val().length > 3 ) {
-      mascara = '####00,00 m';
+$("#tamanho-do-local").on("keyup", function () {
+  if ($(this).val().length > 3) {
+    mascara = "####00,00 m";
   } else {
-    mascara = '####0,0 m';
+    mascara = "####0,0 m";
   }
-  
-  $('#tamanho-do-local').mask( mascara, { reverse: true});
+
+  $("#tamanho-do-local").mask(mascara, { reverse: true });
 });
 
 $("#cep").mask("00000-000");
