@@ -11,6 +11,3 @@ $("#tamanho-do-local").on("keyup", function () {
 });
 
 $("#cep").mask("00000-000");
-$("#numero-do-banco").mask("000");
-$("#agencia").mask("0000");
-$("#conta-corrente").mask("0000000-0");
