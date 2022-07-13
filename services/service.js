@@ -1,37 +1,41 @@
-async function getGarage(url) {
+async function buscarTodosAnuncios(url) {
   const search = await fetch(url);
   const result = await search.json();
 
   return result;
 }
 
-async function getOneGarage(url, id) {
-  const search = await fetch(`${url}${id}`);
+async function pesquisarAnuncio(url, name) {
+  const search = await fetch(`${url}${name}`);
   const result = await search.json();
 
   return result;
 }
 
-async function updateGarage(url, id, object) {
+async function atualizarAnuncio(url, id, object) {
   const search = await fetch(`${url}${id}`, object);
   const result = await search.json();
 
   return result;
 }
 
-async function postGarage(url, object) {
+async function criarAnuncio(url, object) {
   const search = await fetch(`${url}`, object);
   const result = await search.json();
 
   return result;
 }
 
-async function deleteGarage(url, id, object) {
+async function apagarAnuncio(url, id, object) {
   const search = await fetch(`${url}${id}`, object);
   const result = await search.json();
 
   return result;
 }
 
-
-export { getGarage, postGarage, updateGarage };
+export {
+  buscarTodosAnuncios,
+  pesquisarAnuncio,
+  criarAnuncio,
+  atualizarAnuncio,
+};
