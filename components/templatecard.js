@@ -10,6 +10,17 @@ const templateCard = (item) => {
         </a>
         <p class="card-subtitle">${item?.rua}, ${item?.numero} - ${item?.bairro}, ${item?.cidade} - ${item?.estado}, ${item?.cep}</p>
       </div>
+      <div class="card-footer bg-transparent d-flex justify-content-center">
+          <p class="card-text" style="margin: 0px; margin-right: 16px;">
+            <d class="h6">Pagamento: </d> ${item?.tipoPagamento}
+          </p>
+          <p class="card-text" style="margin: 0px; margin-right: 16px;">
+            <d class="h6">Preço: </d> ${item?.preco}
+          </p>
+          <p class="card-text" style="margin: 0px;">
+            <d class="h6">IPTU Incluso: </d> ${item?.temIPTU}
+          </p>
+        </div>
     </div>
   </div>
 `;
