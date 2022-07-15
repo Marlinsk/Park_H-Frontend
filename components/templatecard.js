@@ -8,6 +8,7 @@ const templateCard = (item) => {
             height="26px" style="padding-right: 7px;">
           ${item?.tituloAnuncio}
         </a>
+        <p class="card-text"><small class="text-muted">${item?.tipoLogradouroString}</small></p>
         <p class="card-subtitle">${item?.rua}, ${item?.numero} - ${item?.bairro}, ${item?.cidade} - ${item?.estado}, ${item?.cep}</p>
       </div>
       <div class="card-footer bg-transparent d-flex justify-content-center">
