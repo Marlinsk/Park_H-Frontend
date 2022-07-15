@@ -82,7 +82,7 @@ function getData() {
       tipoVeiculo: dadosAnuncio.tipoVeiculo,
       capacidade: dadosAnuncio.capacidade,
       horarioFuncionamento: dadosAnuncio.horarioFuncionamento,
-      diasDaSemana: Array.from(dadosAnuncio.diasFuncionamento)
+      diasdaSemana: Array.from(dadosAnuncio.diasFuncionamento)
         .filter((a) => a.checked)
         .map((b) => b?.value),
       portaria: dadosAnuncio.temPortaria,
