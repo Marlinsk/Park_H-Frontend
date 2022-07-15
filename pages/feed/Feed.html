@@ -10,7 +10,6 @@
   <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="../../node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
   <link rel="stylesheet" href="../../public/styleScrollbar.css">
 </head>
 
@@ -32,7 +31,7 @@
   </nav>
   <br /><br /><br /><br />
   <div class="container">
-    <div class="col-lg-6 mx-auto">
+    <div class="col-lg-8 mx-auto">
       <h3 class="text-center mb-4">Encontre a garagem mais perto de você!</h3>
       <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="Procurando um anúncio específico?"
@@ -42,7 +41,33 @@
         </button>
       </div>
     </div>
-    <div id="cardtemplate"></div>
+    <div class="col-lg-8 mx-auto">
+      <div class="card mb-3">
+        <div class="card-body">
+          <a href="../ad-page/AdPage.html" class="h5 mb-1"
+            style="display: flex; align-items: center; text-decoration: none;">
+            <img src="../../node_modules/bootstrap-icons/icons/house-fill.svg" alt="house-fill" width="26px"
+              height="26px" style="padding-right: 7px;">
+            Garagem do Edifício Montreal
+          </a>
+          <p class="card-text"><small class="text-muted">Estacionamento de Condomínio</small></p>
+          <p class="card-subtitle">Rua Tomé de Souza, 300 - Savassi, Belo Horizonte - MG, 30140-130</p>
+        </div>
+        <div class="card-footer bg-transparent d-flex justify-content-center">
+          <p class="card-text" style="margin: 0px; margin-right: 16px;">
+            <d class="h6">Pagamento: </d> Mensal
+          </p>
+          <p class="card-text" style="margin: 0px; margin-right: 16px;">
+            <d class="h6">Preço: </d> R$ 250,00
+          </p>
+          <p class="card-text" style="margin: 0px; margin-right: 16px;">
+            <d class="h6">IPTU Incluso: </d> Não
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="cardtemplate"></div>
   </div>
   <script type="module" src="./scripts/feed/feed.js"></script>
   <script type="module" src="../../services/service.js"></script>
