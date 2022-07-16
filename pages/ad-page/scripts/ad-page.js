@@ -10,5 +10,4 @@ renderLoading.innerHTML = templateLoading();
 pesquisarAnuncio(baseUrl, id).then((data) => {
   console.log(data);
 })
-  .catch(renderLoading.innerHTML = templateLoading())
-  .finally(() => renderLoading.innerHTML = templateLoading());
+  .finally(() => renderLoading.innerHTML = '');
