@@ -3,7 +3,7 @@ const dadosAnuncio = {
   tipoGaragem: "",
   tamanhoLocal: "",
   tipoVeiculo: "",
-  capacidade: "",
+  vagas: "",
   horarioFuncionamento: "",
   diasFuncionamento: [],
   descricao: "",
@@ -40,7 +40,7 @@ function getData() {
       document.querySelector("#tamanho-do-local")?.value;
     dadosAnuncio.tipoVeiculo =
       document.querySelector("#tipo-de-veiculo")?.value;
-    dadosAnuncio.capacidade = document.querySelector("#capacidade")?.value;
+    dadosAnuncio.vagas = document.querySelector("#vagas")?.value;
     dadosAnuncio.horarioFuncionamento = document.querySelector(
       'input[name="HorarioFuncionamento"]:checked'
     )?.value;
@@ -80,7 +80,7 @@ function getData() {
       tipoLogradouroString: dadosAnuncio.tipoGarage,
       tamanhoLocal: dadosAnuncio.tamanhoLocal,
       tipoVeiculo: dadosAnuncio.tipoVeiculo,
-      capacidade: dadosAnuncio.capacidade,
+      vagas: dadosAnuncio.vagas,
       horarioFuncionamento: dadosAnuncio.horarioFuncionamento,
       diasdaSemana: Array.from(dadosAnuncio.diasFuncionamento)
         .filter((a) => a.checked)
