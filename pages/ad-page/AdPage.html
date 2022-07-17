@@ -58,7 +58,7 @@
       </div>
       <div class="row justify-content-between">
         <div class="col-3 col-sm-3 d-flex ">
-          <p class=>
+          <p>
             <d class="h6">Tamanho: &nbsp;</d>
           <div id="tamanhoLocal">12m</div>
           </p>
@@ -101,91 +101,45 @@
       <hr>
       <h5>Funcionamento</h5>
       <div class="row">
-        <div class="col-12 mb-4">
-          <p class="mb-3" style="margin: 0px; padding: 0px;">
-            <d class="h6">Horário de Funcionamento: </d>24h
-          </p>
-          <h6>Dias de funcionamento: </h6>
-          <div class="row">
-            <div class="col-12">
-              <div class="row justify-content-between">
-                <div class="col-6">
-                  <p style="display: flex; align-items: center; margin: 0px; padding: 0px;">
-                    <img src="../../node_modules/bootstrap-icons/icons/check-all.svg" alt="Check" width="24px"
-                      height="24px">
-                    Domingo
-                  </p>
-                  <p style="display: flex; align-items: center; margin: 0px; padding: 0px;">
-                    <img src="../../node_modules/bootstrap-icons/icons/check-all.svg" alt="Check" width="24px"
-                      height="24px">
-                    Segunda-feira
-                  </p>
-                  <p style="display: flex; align-items: center; margin: 0px; padding: 0px;">
-                    <img src="../../node_modules/bootstrap-icons/icons/check-all.svg" alt="Check" width="24px"
-                      height="24px">
-                    Terça-feira
-                  </p>
-                  <p style="display: flex; align-items: center; margin: 0px; padding: 0px;">
-                    <img src="../../node_modules/bootstrap-icons/icons/check-all.svg" alt="Check" width="24px"
-                      height="24px">
-                    Quarta-feira
-                  </p>
-                </div>
-                <div class="col-6">
-                  <p style="display: flex; align-items: center; margin: 0px; padding: 0px;">
-                    <img src="../../node_modules/bootstrap-icons/icons/check-all.svg" alt="Check" width="24px"
-                      height="24px">
-                    Quinta-feira
-                  </p>
-                  <p style="display: flex; align-items: center; margin: 0px; padding: 0px;">
-                    <img src="../../node_modules/bootstrap-icons/icons/check-all.svg" alt="Check" width="24px"
-                      height="24px">
-                    Sexta-feira
-                  </p>
-                  <p style="display: flex; align-items: center; margin: 0px; padding: 0px;">
-                    <img src="../../node_modules/bootstrap-icons/icons/check-all.svg" alt="Check" width="24px"
-                      height="24px">
-                    Sábado
-                  </p>
-                </div>
-              </div>
+        <div class="col-12 d-flex">
+          <div class="col-12 d-flex ">
+            <p>
+              <d class="h6">Horário funcionamento &nbsp;</d>
+            <div id="horarioFuncionamento">24h</div>
+            </p>
+          </div>
+        </div>
+        <h6>Dias de funcionamento: </h6>
+        <div class="row">
+          <div class="col-12 mb-4">
+            <div class="row justify-content-between">
+              <div class="col-6" id="diasdaSemana"></div>
             </div>
           </div>
         </div>
       </div>
       <div class="card mb-4">
         <div class="card-body">
-          <div class="d-flex justify-content-between">
-            <p class="card-text" style="margin: 0px; margin-right: 10px;">
-              <d class="h6">Pagamento: </d>Mensal
+          <div class="d-flex justify-content-between" style="height: 20px;">
+            <p class="card-text">
+              <d class="h6">Pagamento: </d>
+              <div id="tipoPagamento">24h</div>
             </p>
-            <p class="card-text" style="width: 120px; margin: 0px; margin-right: 10px;">
-              <d class="h6">Preço: </d>R$ 250,00
+            <p class="card-text">
+              <d class="h6">Preço: </d>
+              <div id="preco">24h</div>
             </p>
-            <p class="card-text" style="margin: 0px; margin-right: 10px;">
-              <d class="h6">IPTU Incluso: </d>Não
+            <p class="card-text">
+              <d class="h6">IPTU Incluso: </d>
+              <div id="iptu">nao</div>
             </p>
           </div>
         </div>
         <div class="card-footer bg-transparent">
           <h6>Aceita as seguintes dormas de pagamento:</h6>
           <div class="row justify-content-between">
-            <div class="col-12">
-              <p style="display: flex; align-items: center; margin: 0px; padding: 0px;">
-                <img src="../../node_modules/bootstrap-icons/icons/check-all.svg" alt="Check" width="24px"
-                  height="24px">
-                Boleto Bancário
-              </p>
-              <p style="display: flex; align-items: center; margin: 0px; padding: 0px;">
-                <img src="../../node_modules/bootstrap-icons/icons/check-all.svg" alt="Check" width="24px"
-                  height="24px">
-                Cartão de crédito
-              </p>
-              <p style="display: flex; align-items: center; margin: 0px; padding: 0px;">
-                <img src="../../node_modules/bootstrap-icons/icons/check-all.svg" alt="Check" width="24px"
-                  height="24px">
-                Pix
-              </p>
+            <div class="col-12" id="tipo-pagamento">
+
             </div>
           </div>
         </div>
@@ -194,8 +148,8 @@
         <div class="col-12">
           <h6>Opções:</h6>
           <div class="d-flex">
-            <a href="../editor-page/EditorPage.html" style="padding-right: 16px;">Editar</a>
-            <a href="#">Excluir</a>
+            <a href="../editor-page/EditorPage.html" id="editar-campos" style="padding-right: 16px;">Editar</a>
+            <a href="" class="delete">Excluir</a>
           </div>
         </div>
       </div>
@@ -206,7 +160,8 @@
 
   <script type="module" src="../../services/api.js"></script>
   <script type="module" src="../../services/service.js"></script>
-  <script type="module" src="./scripts/ad-page.js"></script>
+  <script type="module" src="./scripts/get-ad-page.js"></script>
+  <script type="module" src="./scripts/actions-ad-pages.js"></script>
 </body>
 
 </html>

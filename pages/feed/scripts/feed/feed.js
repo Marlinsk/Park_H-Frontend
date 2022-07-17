@@ -4,12 +4,13 @@ import { buscarTodosAnuncios } from "../../../../services/service.js";
 import { templateLoading } from "../../../../components/template-loading.js";
 
 const renderCards = document.querySelector("#cardtemplate");
+const renderNotFound = document.querySelector("#not-found");
 const renderLoading = document.querySelector("#template-loading");
 
 renderLoading.innerHTML = templateLoading();
 buscarTodosAnuncios(baseUrl).then((data) => {
   if (data.length === 0) {
-    renderLoading.innerHTML = 'Nenhuma garagem foi encontrada';
+    renderNotFound.innerHTML = 'Nenhuma garagem foi encontrada';
     return;
   }
   renderCards.innerHTML = data
@@ -24,6 +25,6 @@ buscarTodosAnuncios(baseUrl).then((data) => {
     console.log(data);
 
 }).catch((err) => {
-  renderCards.innerHTML = `Nenhuma garagem foi encontrada`;
+  renderNotFound.innerHTML = `Nenhuma garagem foi encontrada`;
   console.log(err);
 }).finally(() => renderLoading.innerHTML = '');

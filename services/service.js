@@ -38,4 +38,5 @@ export {
   pesquisarAnuncio,
   criarAnuncio,
   atualizarAnuncio,
+  apagarAnuncio
 };
