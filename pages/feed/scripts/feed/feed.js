@@ -21,6 +21,9 @@ buscarTodosAnuncios(baseUrl).then((data) => {
     })
     .join("");
 
+    console.log(data);
+
 }).catch((err) => {
   renderCards.innerHTML = `Nenhuma garagem foi encontrada`;
+  console.log(err);
 }).finally(() => renderLoading.innerHTML = '');
