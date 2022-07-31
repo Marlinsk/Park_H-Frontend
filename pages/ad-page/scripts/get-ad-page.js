@@ -17,7 +17,16 @@ pesquisarAnuncio(baseUrl, id).then((data) => {
   document.querySelector('#descricao').textContent = data.descricao;
   document.querySelector('#tamanhoLocal').textContent = data.tamanhoLocal;
   document.querySelector('#recursosVigilancia').innerHTML = data.recursosVigilancia.map(item => templateRecursoVigilancia(item)).join("");
-  document.querySelector('#diasdaSemana').innerHTML = data.diasdaSemana.map(item => templateRecursoVigilancia(item)).join("");
+  document.querySelector('#diasdaSemana').innerHTML =  data.diasdaSemana.map(item => templateRecursoVigilancia(item)).join("");
+
+  /// essa data tem os dias da semana
+  // data.diasdaSemana
+
+  // use o slice para dividir o array
+  
+  // document.querySelector('#diasdaSemanaleft').innerHTML  = // dias da semana left  = data.diasdaSemana.slice(0,2)
+  // document.querySelector('#diasdaSemanaRight').innerHTML  // dias da semana right = data.diasdaSemana.slice(2, 5)
+
   document.querySelector('#horarioFuncionamento').innerHTML = data.horarioFuncionamento;
   document.querySelector('#tipoPagamento').innerHTML = data.tipoPagamento;
   document.querySelector('#preco').innerHTML = data.preco.toFixed(2);
