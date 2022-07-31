@@ -76,8 +76,8 @@ function getData() {
 
     const data = {
       tituloAnuncio: dadosAnuncio.titulo,
-      descricaoLocal: dadosAnuncio.description,
-      tipoLogradouroString: dadosAnuncio.tipoGarage,
+      descricaoLocal: document.getElementById("descricao").value,
+      tipoLogradouroString: dadosAnuncio.tipoGaragem,
       tamanhoLocal: dadosAnuncio.tamanhoLocal,
       tipoVeiculo: dadosAnuncio.tipoVeiculo,
       vagas: dadosAnuncio.vagas,

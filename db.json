@@ -1,26 +1,26 @@
 {
   "park-h": [
     {
-      "id": "3fa85f64-5717-4562-b3fc-2c963f66afk3",
+      "id": "3fa85f64-5717-4562-b3fc-2c963f66afk33",
       "bairro": "Industrial Americano",
       "canaisPagamento": [
-        "pix"
+        "Pix"
       ],
-      "tituloAnuncio": "joão ",
+      "tituloAnuncio": "Alef ",
       "tipoLogradouroString": "Garagem Residencial",
       "capacidade": "200",
       "cep": "33065-322",
       "cidade": "Santa Luzia",
-      "complementoLocal": "Perto da COPASA",
+      "complemento": "Perto da COPASA",
       "descricao": "Garagem privada do programador Alef, localizado no bairro Industrial Americano no centro de Santa Luzia.",
       "diasdaSemana": [
         "Seg",
         "Ter"
       ],
       "estado": "Minas Gerais",
-      "horarioFuncionamento": "12h",
+      "horarioFuncionamento": "8H",
       "numero": "320",
-      "portaria": "12",
+      "portaria": "Portaria disponível 24 Horas",
       "recursosVigilancia": [
         "Câmera de visão noturna"
       ],
@@ -29,30 +29,32 @@
       "tamanhoLocal": "500m²",
       "temIPTU": "Sim",
       "tipoLogradouro": "Garagem Residencial",
+      "tipoVeiculo": "Carro",
       "tipoPagamento": "Mensal",
-      "preco": 329
+      "preco": 329,
+      "vagas": 3
     },
     {
       "id": "3fa85f64-5717-4562-b3fc-2c963f66afk3",
       "bairro": "Industrial Americano",
       "canaisPagamento": [
-        "pix"
+        "Pix"
       ],
-      "tituloAnuncio": "joão ",
+      "tituloAnuncio": "Marlon ",
       "tipoLogradouroString": "Garagem Residencial",
       "capacidade": "200",
       "cep": "33065-322",
       "cidade": "Santa Luzia",
-      "complementoLocal": "Perto da COPASA",
+      "complemento": "Perto da COPASA",
       "descricao": "Garagem privada do programador Alef, localizado no bairro Industrial Americano no centro de Santa Luzia.",
       "diasdaSemana": [
         "Seg",
         "Ter"
       ],
       "estado": "Minas Gerais",
-      "horarioFuncionamento": "12h",
+      "horarioFuncionamento": "8H",
       "numero": "320",
-      "portaria": "12",
+      "portaria": "Portaria disponível 24 Horas",
       "recursosVigilancia": [
         "Câmera de visão noturna"
       ],
@@ -62,29 +64,31 @@
       "temIPTU": "Sim",
       "tipoLogradouro": "string",
       "tipoPagamento": "Mensal",
-      "preco": 329
+      "tipoVeiculo": "Carro",
+      "preco": 329,
+      "vagas": 3
     },
     {
       "id": "3fa85f64-5717-4562-b3fc-2c963f66afk3",
       "bairro": "Industrial Americano",
       "canaisPagamento": [
-        "pix"
+        "Pix"
       ],
       "tituloAnuncio": "joão ",
       "tipoLogradouroString": "Garagem Residencial",
       "capacidade": "200",
       "cep": "33065-322",
       "cidade": "Santa Luzia",
-      "complementoLocal": "Perto da COPASA",
+      "complemento": "Perto da COPASA",
       "descricao": "Garagem privada do programador Alef, localizado no bairro Industrial Americano no centro de Santa Luzia.",
       "diasdaSemana": [
         "Seg",
         "Ter"
       ],
       "estado": "Minas Gerais",
-      "horarioFuncionamento": "12h",
+      "horarioFuncionamento": "8H",
       "numero": "320",
-      "portaria": "12",
+      "portaria": "Portaria disponível 24 Horas",
       "recursosVigilancia": [
         "Câmera de visão noturna"
       ],
@@ -94,7 +98,71 @@
       "temIPTU": "Sim",
       "tipoLogradouro": "Garagem Residencial",
       "tipoPagamento": "Mensal",
-      "preco": 329
+      "tipoVeiculo": "Carro",
+      "preco": 329,
+      "vagas": 3
+    },
+    {
+      "tituloAnuncio": "Alef ",
+      "descricaoLocal": "Garagem privada do programador Alef, localizado no bairro Industrial Americano no centro de Santa Luzia.",
+      "tipoLogradouroString": "Garagem Residencial",
+      "tamanhoLocal": "500m²",
+      "tipoVeiculo": "Carro",
+      "vagas": "3",
+      "horarioFuncionamento": "8H",
+      "diasdaSemana": [
+        "Seg",
+        "Ter"
+      ],
+      "portaria": "Portaria disponível 24 Horas",
+      "recursosVigilancia": [
+        "Câmera de visão noturna"
+      ],
+      "cep": "33065-322",
+      "estado": "Minas Gerais",
+      "cidade": "Santa Luzia",
+      "bairro": "Industrial Americano",
+      "rua": "Rua do comercio",
+      "numero": "320",
+      "complementoLocal": "Perto da COPASA",
+      "tipoPagamento": "Mensal",
+      "preco": 329,
+      "temIPTU": "Sim",
+      "canaisPagamento": [
+        "Pix"
+      ],
+      "id": "wsCrEID"
+    },
+    {
+      "tituloAnuncio": "Alef ",
+      "descricaoLocal": "Garagem privada do programador Alef, localizado no bairro Industrial Americano no centro de Santa Luzia.",
+      "tipoLogradouroString": "Garagem Residencial",
+      "tamanhoLocal": "500m²",
+      "tipoVeiculo": "Carro",
+      "vagas": "3",
+      "horarioFuncionamento": "8H",
+      "diasdaSemana": [
+        "Seg",
+        "Ter"
+      ],
+      "portaria": "Portaria disponível 24 Horas",
+      "recursosVigilancia": [
+        "Câmera de visão noturna"
+      ],
+      "cep": "33065-322",
+      "estado": "Minas Gerais",
+      "cidade": "Santa Luzia",
+      "bairro": "Industrial Americano",
+      "rua": "Rua do comercio",
+      "numero": "320",
+      "complementoLocal": "Perto da COPASA",
+      "tipoPagamento": "Mensal",
+      "preco": 329,
+      "temIPTU": "Sim",
+      "canaisPagamento": [
+        "Pix"
+      ],
+      "id": "mOYKWRQ"
     }
   ]
 }

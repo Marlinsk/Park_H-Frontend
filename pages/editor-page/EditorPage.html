@@ -95,7 +95,7 @@
           <div class="col-4 col-sm-4">
             <label for="tipo-de-veiculo" class="form-label">Tipo de Veículo</label>
             <select class="form-select" id="tipo-de-veiculo" aria-label="Selecione o Tipo de veículo"
-              aria-placeholder="Selecione o Tipo">
+              value="Carro" aria-placeholder="Selecione o Tipo">
               <option selected disabled>Selecione o Tipo</option>
               <option value="Carro">Carro</option>
               <option value="Caminhonete">Caminhonete</option>
@@ -140,31 +140,31 @@
         <div class="row g-2 mb-2">
           <div class="col-12 col-sm-12">
             <div class="form-check form-check-inline">
-              <input class="form-check-input week" type="checkbox" id="dias-da-semana-domingo" value="Dom" />
+              <input class="form-check-input week" type="checkbox" name="dias-semana" id="dias-da-semana-domingo" value="Dom" />
               <label class="form-check-label" for="dias-da-semana-domingo">Dom</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input week" type="checkbox" id="dias-da-semana-segunda" value="Seg" />
+              <input class="form-check-input week" type="checkbox" name="dias-semana" id="dias-da-semana-segunda" value="Seg" />
               <label class="form-check-label" for="dias-da-semana-segunda">Seg</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input week" type="checkbox" id="dias-da-semana-terca" value="Ter" />
+              <input class="form-check-input week" type="checkbox" name="dias-semana" id="dias-da-semana-terca" value="Ter" />
               <label class="form-check-label" for="dias-da-semana-terca">Ter</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input week" type="checkbox" id="dias-da-semana-quarta" value="Qua" />
+              <input class="form-check-input week" type="checkbox" name="dias-semana" id="dias-da-semana-quarta" value="Qua" />
               <label class="form-check-label" for="dias-da-semana-quarta">Qua</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input week" type="checkbox" id="dias-da-semana-quinta" value="Qui" />
+              <input class="form-check-input week" type="checkbox" name="dias-semana" id="dias-da-semana-quinta" value="Qui" />
               <label class="form-check-label" for="dias-da-semana-quinta">Qui</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input week" type="checkbox" id="dias-da-semana-sexta" value="Sex" />
+              <input class="form-check-input week" type="checkbox" name="dias-semana" id="dias-da-semana-sexta" value="Sex" />
               <label class="form-check-label" for="dias-da-semana-sexta">Sex</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input week" type="checkbox" id="dias-da-semana-sabado" value="Sáb" />
+              <input class="form-check-input week" type="checkbox" name="dias-semana" id="dias-da-semana-sabado" value="Sáb" />
               <label class="form-check-label" for="dias-da-semana-sabado">Sáb</label>
             </div>
           </div>
@@ -202,37 +202,37 @@
         <div class="row g-2 mb-4">
           <div class="col-6 col-sm-6">
             <div class="form-check">
-              <input class="form-check-input vigilancia" type="checkbox" value="Câmeras" id="cameras" />
+              <input class="form-check-input vigilancia" name="vigilancia" type="checkbox" value="Câmeras" id="cameras" />
               <label class="form-check-label" for="cameras"> Câmeras </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input vigilancia" type="checkbox" value="Câmera de visão noturna"
+              <input class="form-check-input vigilancia" name="vigilancia" type="checkbox" value="Câmera de visão noturna"
                 id="camera-de-visao-noturna" />
               <label class="form-check-label" for="camera-de-visao-noturna">
                 Câmera de visão noturna
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input vigilancia" type="checkbox" value="Alarme" id="alarme" />
+              <input class="form-check-input vigilancia" name="vigilancia" type="checkbox" value="Alarme" id="alarme" />
               <label class="form-check-label" for="alarme"> Alarme </label>
             </div>
           </div>
           <div class="col-6 col-sm-6">
             <div class="form-check">
-              <input class="form-check-input vigilancia" type="checkbox" value="Empresa terceirizada"
+              <input class="form-check-input vigilancia" name="vigilancia" type="checkbox" value="Empresa terceirizada"
                 id="empresa-terceirizada" />
               <label class="form-check-label" for="empresa-terceirizada">
                 Empresa terceirizada
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input vigilancia" type="checkbox" value="Vigia 24 horas" id="vigia-24-horas" />
+              <input class="form-check-input vigilancia" name="vigilancia" type="checkbox" value="Vigia 24 horas" id="vigia-24-horas" />
               <label class="form-check-label" for="vigia-24-horas">
                 Vigia 24 horas
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input vigilancia" type="checkbox" value="Policia Particular"
+              <input class="form-check-input vigilancia" name="vigilancia" type="checkbox" value="Policia Particular"
                 id="policia-particular" />
               <label class="form-check-label" for="policia-particular">
                 Policia Particular
@@ -336,16 +336,16 @@
         <div class="row g-2 mb-4">
           <div class="col-6 col-sm-6">
             <div class="form-check">
-              <input class="form-check-input pagamento" type="checkbox" value="Boleto Bancário" id="boleto-bancario" />
+              <input class="form-check-input pagamento" name="pagamento" type="checkbox" value="Boleto Bancário" id="boleto-bancario" />
               <label class="form-check-label" for="boleto-bancario">Boleto Bancário</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input pagamento" type="checkbox" value="Cartão de crédito"
+              <input class="form-check-input pagamento" name="pagamento" type="checkbox" value="Cartão de crédito"
                 id="cartao-de-credito" />
               <label class="form-check-label" for="cartao-de-credito">Cartão de crédito</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input pagamento" type="checkbox" value="Pix" id="pix" />
+              <input class="form-check-input pagamento" name="pagamento" type="checkbox" value="Pix" id="pix" />
               <label class="form-check-label" for="pix">Pix</label>
             </div>
           </div>
@@ -361,7 +361,7 @@
   <div id="template-loading"></div>
   
   <script type="module" src="./scripts/editor-page.js"></script>
-  <!-- <script type="module" src="./scripts/event/submit.js"></script> -->
+  <script type="module" src="./scripts/event/submit.js"></script>
   <script type="module" src="./scripts/getdata/script.js"></script>
   <script type="module" src="./scripts/lockout/charLimit.js"></script>
   <script type="module" src="./scripts/lockout/inputLock.js"></script>
