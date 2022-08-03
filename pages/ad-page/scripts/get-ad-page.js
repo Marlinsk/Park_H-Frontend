@@ -38,16 +38,18 @@ pesquisarAnuncio(baseUrl, id)
         .map((item) => templateCheckIcon(item))
         .join("");
 
-    document.querySelector("#diasdaSemanaColunaEsquerda").innerHTML =
-      data.diasdaSemana
-        .slice(0, 4) // 0, 1, 2, 3, 4, 5, 6
-        .map((item) => templateCheckIcon(item))
-        .join("");
-    document.querySelector("#diasdaSemanaColunaDireita").innerHTML =
-      data.diasdaSemana
-        .slice(4, 7)
-        .map((item) => templateCheckIcon(item))
-        .join("");
+    document.querySelector("#diasdaSemanaColuna1").innerHTML = data.diasdaSemana
+      .slice(0, 3) // 0, 1, 2, 3, 4, 5, 6
+      .map((item) => templateCheckIcon(item))
+      .join("");
+    document.querySelector("#diasdaSemanaColuna2").innerHTML = data.diasdaSemana
+      .slice(3, 6)
+      .map((item) => templateCheckIcon(item))
+      .join("");
+    document.querySelector("#diasdaSemanaColuna3").innerHTML = data.diasdaSemana
+      .slice(6, 7)
+      .map((item) => templateCheckIcon(item))
+      .join("");
 
     document.querySelector("#horarioFuncionamento").innerHTML =
       data.horarioFuncionamento;
