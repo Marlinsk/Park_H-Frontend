@@ -18,13 +18,11 @@ pesquisarAnuncio(baseUrl, id)
     document.querySelector(
       "#endereco"
     ).textContent = `${data?.rua}, ${data?.numero} - ${data?.bairro}, ${data?.cidade} - ${data?.estado}, ${data?.cep}`;
+    document.querySelector("#complemento").textContent = data.complementoLocal;
     document.querySelector("#descricao").textContent = data.descricao;
     document.querySelector("#tamanhoLocal").textContent = data.tamanhoLocal;
     document.querySelector("#tipo-veiculo").textContent = data.tipoVeiculo;
     document.querySelector("#numeroVagas").textContent = data.vagas;
-    document.querySelector("#complemento").textContent = data.complementoLocal;
-    // document.querySelector("#recursosVigilancia").innerHTML =
-    //   data.recursosVigilancia.map((item) => templateCheckIcon(item)).join("");
 
     document.querySelector("#recursosVigilanciaColunaEsquerda").innerHTML =
       data.recursosVigilancia
@@ -39,7 +37,7 @@ pesquisarAnuncio(baseUrl, id)
         .join("");
 
     document.querySelector("#diasdaSemanaColuna1").innerHTML = data.diasdaSemana
-      .slice(0, 3) // 0, 1, 2, 3, 4, 5, 6
+      .slice(0, 3)
       .map((item) => templateCheckIcon(item))
       .join("");
     document.querySelector("#diasdaSemanaColuna2").innerHTML = data.diasdaSemana
