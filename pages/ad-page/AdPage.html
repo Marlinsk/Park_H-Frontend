@@ -35,174 +35,96 @@
     <div class="py-2 text-center">
       <img class="mb-2 d-block mx-auto" src="../../assets/warehouse-solid.svg" alt="warehouse" width="36px"
         height="36px" />
-      <h3>Garagem do Edifício Montreal</h3>
-      <p class="lead">Estacionamento de Condomínio</p>
+      <h3 id="tituloAnuncio"></h3>
+      <p class="lead" id="tipoLogradouroString"></p>
     </div>
   </div>
   <div class="container">
     <div class="col-lg-6 mb-4 mx-auto">
       <h5>Endereço</h5>
       <div class="row">
-        <div class="col-md-12">
-          Rua Tomé de Souza, 300 - Savassi, Belo Horizonte - MG, 30140-130
-        </div>
+        <div class="col-md-12" id="endereco"></div>
+        <div class="col-md-12 d-flex" id="complemento"></div>
       </div>
       <hr>
       <h5>Descrição</h5>
       <div class="row">
         <div class="col-md-12">
-          <p>
-            Garagem de condomínio do Edifício Montreal, localizado no bairro Savassi no centro de Belo Horizonte.
-          </p>
+          <p id="descricao"></p>
         </div>
       </div>
       <div class="row justify-content-between">
-        <div class="col-3 col-sm-3">
+        <div class="col-3 col-sm-3 d-flex ">
           <p>
-            <d class="h6">Tamanho: </d>12m
+            <d class="h6">Tamanho: &nbsp;</d>
+          <div id="tamanhoLocal"></div>
           </p>
         </div>
-        <div class="col-4 col-sm-6">
+        <div class="col-4 col-sm-6 d-flex">
           <p>
-            <d class="h6">Tipo de Veículo: </d> Veículos motorizados
+            <d class="h6">Tipo de Veículo: &nbsp;</d>
+          <div id="tipo-veiculo"></div>
           </p>
         </div>
-        <div class="col-3 col-sm-3">
+        <div class="col-3 col-sm-3 d-flex">
           <p>
-            <d class="h6">Vagas: </d> 2
+            <d class="h6">Vagas: &nbsp;</d>
+          <div id="numeroVagas"></div>
           </p>
         </div>
       </div>
       <h6>O local possui:</h6>
-      <div class="row ">
+      <div class="row">
         <div class="col-12">
           <div class="row justify-content-between">
-            <div class="col-6">
-              <p style="display: flex; align-items: center; margin: 0px; padding: 0px;">
-                <img src="../../node_modules/bootstrap-icons/icons/check-all.svg" alt="Check" width="24px"
-                  height="24px">
-                Portaria 24 horas
-              </p>
-              <p style="display: flex; align-items: center; margin: 0px; padding: 0px;">
-                <img src="../../node_modules/bootstrap-icons/icons/check-all.svg" alt="Check" width="24px"
-                  height="24px">
-                Câmeras
-              </p>
-              <p style="display: flex; align-items: center; margin: 0px; padding: 0px;">
-                <img src="../../node_modules/bootstrap-icons/icons/check-all.svg" alt="Check" width="24px"
-                  height="24px">
-                Alarme
-              </p>
-            </div>
-            <div class="col-6">
-              <p style="display: flex; align-items: center; margin: 0px; padding: 0px;">
-                <img src="../../node_modules/bootstrap-icons/icons/check-all.svg" alt="Check" width="24px"
-                  height="24px">
-                Empresa terceirizada
-              </p>
-              <p style="display: flex; align-items: center; margin: 0px; padding: 0px;">
-                <img src="../../node_modules/bootstrap-icons/icons/check-all.svg" alt="Check" width="24px"
-                  height="24px">
-                Vigia 24 horas
-              </p>
-              <p style="display: flex; align-items: center; margin: 0px; padding: 0px;">
-                <img src="../../node_modules/bootstrap-icons/icons/check-all.svg" alt="Check" width="24px"
-                  height="24px">
-                Câmera de visão noturna
-              </p>
-            </div>
+            <div class="col-6" id="recursosVigilanciaColunaEsquerda"></div>
+            <div class="col-6" id="recursosVigilanciaColunaDireita"></div>
           </div>
         </div>
       </div>
       <hr>
       <h5>Funcionamento</h5>
       <div class="row">
-        <div class="col-12 mb-4">
-          <p class="mb-3" style="margin: 0px; padding: 0px;">
-            <d class="h6">Horário de Funcionamento: </d>24h
-          </p>
-          <h6>Dias de funcionamento: </h6>
-          <div class="row">
-            <div class="col-12">
-              <div class="row justify-content-between">
-                <div class="col-6">
-                  <p style="display: flex; align-items: center; margin: 0px; padding: 0px;">
-                    <img src="../../node_modules/bootstrap-icons/icons/check-all.svg" alt="Check" width="24px"
-                      height="24px">
-                    Domingo
-                  </p>
-                  <p style="display: flex; align-items: center; margin: 0px; padding: 0px;">
-                    <img src="../../node_modules/bootstrap-icons/icons/check-all.svg" alt="Check" width="24px"
-                      height="24px">
-                    Segunda-feira
-                  </p>
-                  <p style="display: flex; align-items: center; margin: 0px; padding: 0px;">
-                    <img src="../../node_modules/bootstrap-icons/icons/check-all.svg" alt="Check" width="24px"
-                      height="24px">
-                    Terça-feira
-                  </p>
-                  <p style="display: flex; align-items: center; margin: 0px; padding: 0px;">
-                    <img src="../../node_modules/bootstrap-icons/icons/check-all.svg" alt="Check" width="24px"
-                      height="24px">
-                    Quarta-feira
-                  </p>
-                </div>
-                <div class="col-6">
-                  <p style="display: flex; align-items: center; margin: 0px; padding: 0px;">
-                    <img src="../../node_modules/bootstrap-icons/icons/check-all.svg" alt="Check" width="24px"
-                      height="24px">
-                    Quinta-feira
-                  </p>
-                  <p style="display: flex; align-items: center; margin: 0px; padding: 0px;">
-                    <img src="../../node_modules/bootstrap-icons/icons/check-all.svg" alt="Check" width="24px"
-                      height="24px">
-                    Sexta-feira
-                  </p>
-                  <p style="display: flex; align-items: center; margin: 0px; padding: 0px;">
-                    <img src="../../node_modules/bootstrap-icons/icons/check-all.svg" alt="Check" width="24px"
-                      height="24px">
-                    Sábado
-                  </p>
-                </div>
-              </div>
+        <div class="col-12 d-flex">
+          <div class="col-12 d-flex ">
+            <p>
+              <d class="h6">Horário funcionamento &nbsp;</d>
+            <div id="horarioFuncionamento"></div>
+            </p>
+          </div>
+        </div>
+        <h6>Dias de funcionamento: </h6>
+        <div class="row">
+          <div class="col-12 mb-4">
+            <div class="row justify-content-between">
+              <div class="col-4" id="diasdaSemanaColuna1"></div>
+              <div class="col-4" id="diasdaSemanaColuna2"></div>
+              <div class="col-4" id="diasdaSemanaColuna3"></div>
             </div>
           </div>
         </div>
       </div>
       <div class="card mb-4">
         <div class="card-body">
-          <div class="d-flex justify-content-between">
-            <p class="card-text" style="margin: 0px; margin-right: 10px;">
-              <d class="h6">Pagamento: </d>Mensal
+          <div class="d-flex justify-content-between" style="height: 20px;">
+            <p class="card-text">
+              <d class="h6">Pagamento: </d>
+            <div id="tipoPagamento"></div>
             </p>
-            <p class="card-text" style="width: 120px; margin: 0px; margin-right: 10px;">
-              <d class="h6">Preço: </d>R$ 250,00
+            <p class="card-text">
+              <d class="h6">Preço: </d>
+            <div id="preco"></div>
             </p>
-            <p class="card-text" style="margin: 0px; margin-right: 10px;">
-              <d class="h6">IPTU Incluso: </d>Não
+            <p class="card-text">
+              <d class="h6">IPTU Incluso: </d>
+            <div id="iptu"></div>
             </p>
           </div>
         </div>
         <div class="card-footer bg-transparent">
-          <h6>Aceita as seguintes dormas de pagamento:</h6>
+          <h6>Aceita as seguintes formas de pagamento:</h6>
           <div class="row justify-content-between">
-            <div class="col-12">
-              <p style="display: flex; align-items: center; margin: 0px; padding: 0px;">
-                <img src="../../node_modules/bootstrap-icons/icons/check-all.svg" alt="Check" width="24px"
-                  height="24px">
-                Boleto Bancário
-              </p>
-              <p style="display: flex; align-items: center; margin: 0px; padding: 0px;">
-                <img src="../../node_modules/bootstrap-icons/icons/check-all.svg" alt="Check" width="24px"
-                  height="24px">
-                Cartão de crédito
-              </p>
-              <p style="display: flex; align-items: center; margin: 0px; padding: 0px;">
-                <img src="../../node_modules/bootstrap-icons/icons/check-all.svg" alt="Check" width="24px"
-                  height="24px">
-                Pix
-              </p>
-            </div>
+            <div class="col-12" id="tipo-pagamento"></div>
           </div>
         </div>
       </div>
@@ -210,13 +132,20 @@
         <div class="col-12">
           <h6>Opções:</h6>
           <div class="d-flex">
-            <a href="../editor-page/EditorPage.html" style="padding-right: 16px;">Editar</a>
-            <a href="#">Excluir</a>
+            <a href="../editor-page/EditorPage.html" id="editar-campos" style="padding-right: 16px;">Editar</a>
+            <a href="" class="delete">Excluir</a>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <div id="template-loading"></div>
+
+  <script type="module" src="../../services/api.js"></script>
+  <script type="module" src="../../services/service.js"></script>
+  <script type="module" src="./scripts/get-ad-page.js"></script>
+  <script type="module" src="./scripts/actions-ad-pages.js"></script>
 </body>
 
 </html>
